@@ -1,4 +1,4 @@
-package com.xxz.magnetmovie;
+package com.xxz.magnet;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
