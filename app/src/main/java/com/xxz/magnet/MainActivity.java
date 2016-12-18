@@ -1,7 +1,8 @@
-package com.xxz.magnetmovie;
+package com.xxz.magnet;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.xxz.magnetmovie.R;
 
 public class MainActivity extends AppCompatActivity {
 
