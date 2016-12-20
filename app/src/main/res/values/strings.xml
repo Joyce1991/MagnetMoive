@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MagnetMovie</string>
+
+    <string name="err_io">读写异常</string>
+    <string name="err_no_network">当前无网络</string>
+    <string name="err_server_failed">访问服务器失败</string>
+    <string name="err_unknown">未知错误</string>
+    <string name="err_no_new_data">未知错误</string>
+
 </resources>

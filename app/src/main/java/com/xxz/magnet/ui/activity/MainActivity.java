@@ -1,7 +1,8 @@
-package com.xxz.magnet;
+package com.xxz.magnet.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import com.xxz.magnet.R;
 
 public class MainActivity extends AppCompatActivity {
 
