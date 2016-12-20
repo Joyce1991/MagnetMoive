@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.xiaolu123.library.widgets.MultiStateView;
-import com.xxz.bussiness.network.OkHttpEngine;
+import com.xxz.bussiness.network.HttpRequester;
 import com.xxz.bussiness.otto.BusProvider;
 import com.xxz.magnet.R;
 import com.xxz.magnet.utils.ViewUtils;
@@ -221,7 +221,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
         if (mTagMap != null) {
             if (cancelRequest()) {
                 for (String key : mTagMap.keySet()) {
-                    OkHttpEngine.cancelRequestByTag(key);
+                    HttpRequester.cancelRequestByTag(key);
                 }
             }
             mTagMap.clear();

@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * Author chenql
  * Data  2016-8-18.
  */
-public class OkHttpEngine {
+public class HttpRequester {
 
     static {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -29,7 +29,7 @@ public class OkHttpEngine {
     public static final int MODE_POST = 1;//post请求
     public static final int TYPE_OWN = 2;//我们自己逻辑参数
 
-    private OkHttpEngine(Builder builder) {
+    private HttpRequester(Builder builder) {
         mBuilder = builder;
     }
 
@@ -147,8 +147,8 @@ public class OkHttpEngine {
             return this;
         }
 
-        public OkHttpEngine build() {
-            return new OkHttpEngine(this);
+        public HttpRequester build() {
+            return new HttpRequester(this);
         }
     }
 
