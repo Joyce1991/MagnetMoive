@@ -10,6 +10,11 @@ import com.xxz.magnet.R;
  */
 
 public class DyttFragment extends BaseFragment {
+
+
+    public static DyttFragment newInstance() {
+        return new DyttFragment();
+    }
     @Override
     public void bindViews(View view) {
 

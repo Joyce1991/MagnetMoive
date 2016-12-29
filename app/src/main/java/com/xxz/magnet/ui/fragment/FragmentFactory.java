@@ -8,7 +8,10 @@ package com.xxz.magnet.ui.fragment;
  * Date:2015/8/13.
  */
 public class FragmentFactory {
-    public static final int FRAGMENT_TYPE_GET_VERIFY = 0x1002; //获取验证码
+    /**
+     * dytt类影视详情
+     */
+    public static final int FRAGMENT_TYPE_MOVE_DETAIL_DYTT = 0x1003;
 
 
     private static FragmentFactory instance = new FragmentFactory();
@@ -24,8 +27,8 @@ public class FragmentFactory {
         BaseFragment fragment = null;
 
         switch (type) {
-            case FRAGMENT_TYPE_GET_VERIFY:
-
+            case FRAGMENT_TYPE_MOVE_DETAIL_DYTT:
+                fragment =  DyttFragment.newInstance();
                 break;
 
 
