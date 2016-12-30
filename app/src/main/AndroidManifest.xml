@@ -33,7 +33,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.SubActivity" />
+        <activity android:name=".ui.activity.SubActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
