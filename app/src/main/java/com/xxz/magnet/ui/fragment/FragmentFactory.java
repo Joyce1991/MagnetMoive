@@ -12,6 +12,7 @@ public class FragmentFactory {
      * dytt类影视详情
      */
     public static final int FRAGMENT_TYPE_MOVE_DETAIL_DYTT = 0x1003;
+    public static final int FRAGMENT_TYPE_MOVE_SCREEN_SHOT = 0x2001;
 
 
     private static FragmentFactory instance = new FragmentFactory();
@@ -31,7 +32,9 @@ public class FragmentFactory {
                 fragment =  DyttFragment.newInstance();
                 break;
 
-
+            case FRAGMENT_TYPE_MOVE_SCREEN_SHOT:
+                fragment = SSFragment.newInstance();
+                break;
         }
         return fragment;
     }

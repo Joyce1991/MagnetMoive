@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+
 import com.xxz.magnet.R;
 import com.xxz.magnet.ui.fragment.BaseFragment;
 import com.xxz.magnet.ui.fragment.FragmentFactory;
