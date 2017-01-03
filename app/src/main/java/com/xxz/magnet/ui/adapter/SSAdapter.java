@@ -1,10 +1,9 @@
 package com.xxz.magnet.ui.adapter;
 
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -16,46 +15,45 @@ import java.util.List;
  * Created by joyce on 2017/1/3.
  */
 
-public class SSAdapter extends BaseAdapter {
-    private Context mContext;
+public class SSAdapter extends RecyclerView.Adapter<SSAdapter.MyViewHolder> {
     private List<String> data;
 
-    public SSAdapter(Context context, List<String> pData) {
-        this.mContext = context;
+    public SSAdapter( List<String> pData) {
         data = pData;
     }
 
+
     @Override
-    public int getCount() {
+    public int getItemCount() {
         return data.size();
     }
 
     @Override
-    public Object getItem(int position) {
-        return data.get(position);
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_ss,
+                parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public long getItemId(int position) {
-        return position;
+    public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
+        Picasso.with(myViewHolder.title.getContext()).load(data.get(position)).into(myViewHolder.title);
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup pViewGroup) {
-        ViewHolder viewHolder;
-        if (convertView == null) {
-            viewHolder = new ViewHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.layout_item_ss, null);
-            viewHolder.ss = (ImageView) convertView.findViewById(R.id.item_image);
-            convertView.setTag(viewHolder);
-        }else {
-            viewHolder = (ViewHolder) convertView.getTag();
-        }
-        Picasso.with(mContext).load(data.get(position)).into(viewHolder.ss);
-        return convertView;
-    }
+
 
     private class ViewHolder {
         public ImageView ss;
+    }
+
+    class MyViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView title;
+
+        public MyViewHolder(View itemView) {
+            super(itemView);
+
+            title = (ImageView) itemView.findViewById(R.id.item_image);
+        }
     }
 }

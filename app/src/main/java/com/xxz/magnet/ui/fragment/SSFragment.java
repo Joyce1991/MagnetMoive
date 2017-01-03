@@ -1,7 +1,8 @@
 package com.xxz.magnet.ui.fragment;
 
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ListView;
 
 import com.xxz.magnet.R;
 import com.xxz.magnet.ui.adapter.SSAdapter;
@@ -21,8 +22,11 @@ public class SSFragment extends BaseFragment {
 
     @Override
     public void bindViews(View view) {
-        ListView listView = (ListView) view.findViewById(R.id.ss_list);
-        listView.setAdapter(new SSAdapter(getActivity().getApplicationContext(), Arrays.asList(items)));
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.ss_list);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(new SSAdapter(Arrays.asList(items)));
     }
 
     @Override
