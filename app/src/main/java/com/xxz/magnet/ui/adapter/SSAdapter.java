@@ -40,12 +40,6 @@ public class SSAdapter extends RecyclerView.Adapter<SSAdapter.MyViewHolder> {
         Picasso.with(myViewHolder.title.getContext()).load(data.get(position)).into(myViewHolder.title);
     }
 
-
-
-    private class ViewHolder {
-        public ImageView ss;
-    }
-
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView title;

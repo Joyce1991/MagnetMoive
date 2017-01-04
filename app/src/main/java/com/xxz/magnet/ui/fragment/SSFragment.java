@@ -31,6 +31,6 @@ public class SSFragment extends BaseFragment {
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.fragment_detail_ss;
+        return R.layout.fragment_dytt_ss;
     }
 }

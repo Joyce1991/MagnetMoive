@@ -29,10 +29,9 @@ public class DyttFragment extends BaseFragment {
     }
 
     private void setupViewPager(ViewPager pager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
-        adapter.addFrag(FragmentFactory.getInstance().getFragment(FragmentFactory.FRAGMENT_TYPE_MOVE_SCREEN_SHOT), "Tab 1");
-        adapter.addFrag(FragmentFactory.getInstance().getFragment(FragmentFactory.FRAGMENT_TYPE_MOVE_SCREEN_SHOT), "Tab 2");
-
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getApplicationContext(), getActivity().getSupportFragmentManager());
+        adapter.addFrag(FragmentFactory.getInstance().getFragment(FragmentFactory.FRAGMENT_TYPE_MOVE_SCREEN_SHOT));
+        adapter.addFrag(FragmentFactory.getInstance().getFragment(FragmentFactory.FRAGMENT_TYPE_MOVE_DETAIL));
         pager.setAdapter(adapter);
     }
 
@@ -46,7 +45,7 @@ public class DyttFragment extends BaseFragment {
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.fragmant_detail_dytt;
+        return R.layout.fragmant_dytt;
     }
 
 

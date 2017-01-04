@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#4D87C5</color>
+    <color name="colorPrimaryDark">#457AB0</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorDetail">#33CCCC</color>
@@ -11,4 +11,6 @@
     <color name="default_fill_color">#ffffff</color>
     <color name="golden_stars">#FFC619</color>
     <color name="colorYellow">#FF9800</color>
+    <color name="colorText">#393939</color>
+    <color name="colorTextSecond">#9F9F9F</color>
 </resources>

@@ -13,6 +13,7 @@ public class FragmentFactory {
      */
     public static final int FRAGMENT_TYPE_MOVE_DETAIL_DYTT = 0x1003;
     public static final int FRAGMENT_TYPE_MOVE_SCREEN_SHOT = 0x2001;
+    public static final int FRAGMENT_TYPE_MOVE_DETAIL = 0x2002;
 
 
     private static FragmentFactory instance = new FragmentFactory();
@@ -34,6 +35,9 @@ public class FragmentFactory {
 
             case FRAGMENT_TYPE_MOVE_SCREEN_SHOT:
                 fragment = SSFragment.newInstance();
+                break;
+            case FRAGMENT_TYPE_MOVE_DETAIL:
+                fragment = DetailFragment.newInstance();
                 break;
         }
         return fragment;
